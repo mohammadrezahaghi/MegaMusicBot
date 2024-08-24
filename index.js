@@ -3,7 +3,7 @@ require('dotenv').config()
 
 const DiscordMusicBot = require("./lib/DiscordMusicBot");
 const { exec } = require("child_process");
-
+const keep_alive = require('./keep_alive')
 if (process.env.REPL_ID) {
 	console.log("Replit system detected, initiating special `unhandledRejection` event listener.")
 	process.on('unhandledRejection', (reason, promise) => {
